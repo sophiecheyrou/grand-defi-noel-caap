@@ -3,7 +3,7 @@
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 header('X-Content-Type-Options: nosniff');
-$colleges = ['André Malraux','Beaumarchais','Claude Chappe','Couperin','Debussy','Françoise Dolto','Georges Méliès','Jean Moulin','Jean Perrin','Jean-Baptiste Clément','La Grange aux Belles','Lacore','Marie Curie','Mendès-France','Nicolas de Staël','Octave Gréard','Raymond Queneau','Saint-Exupéry','Utrillo'];
+$colleges = ['André Malraux','Beaumarchais','Claude Chappe','Couperin','Debussy','Françoise Dolto','Georges Méliès','Jean Moulin','Jean Perrin','Jean-Baptiste Clément','La Grange aux Belles','Lacore','Marie Curie','Mendès-France','Nicolas de Staël','Octave Gréard','Raymond Queneau','Saint-Exupéry','Utrillo','Les amis du CAAP'];
 try {
   $db = new PDO('sqlite:'.__DIR__.'/caap-data.sqlite',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
   $db->exec('PRAGMA busy_timeout=5000');
