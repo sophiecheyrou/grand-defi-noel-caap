@@ -459,40 +459,31 @@ header.v18-banner::before{content:""!important;display:block!important;position:
 @keyframes v34glowB{0%{opacity:.68}50%{opacity:.12}100%{opacity:.8}}
 @media screen and (max-width:650px) and (prefers-reduced-motion:reduce){body .mobile-welcome .v28-lights,body .mobile-welcome::before{animation:none!important;opacity:.25!important}}
 
-/* V35 — uniquement smartphone : photo moins haute, fondu organique vers le contenu. */
+/* V36 : image mobile avec transparence progressive intégrée aux pixels.
+   Aucun masque CSS Safari, aucune bande intermédiaire, bureau inchangé. */
 @media screen and (max-width:650px){
  body .mobile-welcome{
-   position:relative!important;
-   background:#e9f3f8!important;
-   overflow:visible!important;
-   isolation:isolate!important;
+   position:relative!important;display:block!important;overflow:hidden!important;
+   isolation:isolate!important;background:#eaf3f9!important;
  }
  body .mobile-welcome > img.mobile-welcome-photo{
-   display:block!important;
-   width:100%!important;
-   height:auto!important;
-   aspect-ratio:1024/1450!important;
-   object-fit:contain!important;
-   max-height:none!important;
-   -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 90%,rgba(0,0,0,.94) 93%,rgba(0,0,0,.65) 96%,transparent 100%)!important;
-   mask-image:linear-gradient(to bottom,#000 0%,#000 90%,rgba(0,0,0,.94) 93%,rgba(0,0,0,.65) 96%,transparent 100%)!important;
+   display:block!important;width:100%!important;height:auto!important;
+   aspect-ratio:1024/1400!important;object-fit:contain!important;
+   max-height:none!important;transform:none!important;filter:none!important;
+   -webkit-mask-image:none!important;mask-image:none!important;
  }
- body .mobile-welcome::after{
-   content:""!important;display:block!important;position:absolute!important;
-   left:0!important;right:0!important;bottom:-1px!important;height:12%!important;
-   background:linear-gradient(to bottom,transparent 0%,rgba(233,243,248,.08) 38%,#e9f3f8 100%)!important;
-   pointer-events:none!important;z-index:5!important;
+ body .mobile-welcome::after{display:none!important;content:none!important;background:none!important}
+ body .mobile-welcome .v28-lights,body .mobile-welcome::before{
+   -webkit-mask-image:none!important;mask-image:none!important;
  }
  body .v28-helpbar{
-   position:relative!important;
-   margin-top:-2px!important;
-   background:linear-gradient(180deg,#e9f3f8 0%,#edf5fb 100%)!important;
-   padding:12px 8px 14px!important;
+   position:relative!important;margin-top:-2px!important;
+   background:#eaf3f9!important;padding:12px 8px 14px!important;
  }
  body main{background:linear-gradient(180deg,#edf5fb 0%,transparent 190px)!important}
 }
 
-</style></head><body><header class="v18-banner" aria-label="Le Grand Défi de Noël CAAP — 24 jours pour bouger ! — 19 collèges, 24 défis, un même élan !"></header><section class="mobile-welcome" aria-label="Bienvenue au Grand Défi de Noël CAAP"><img class="mobile-welcome-photo" width="1024" height="1536" src="images/accueil-mobile-v35.webp" alt="La Sorbonne illuminée pour Noël, avec la Tour Eiffel"><div class="v27-logos" aria-hidden="true"><img src="images/logo-caap-officiel-v28.png" alt="Logo CAAP"><img src="images/logo-academie-paris.jpg" alt="Logo Académie de Paris"></div><div class="v28-lights" aria-hidden="true"></div><div class="mobile-welcome-titles"><div class="mw-green">Le Grand Défi de Noël CAAP</div><div class="mw-red">24 jours pour bouger !</div><div class="mw-white">19 collèges · 24 défis · Un même élan !</div><a class="mobile-cta" href="#calendar">🎁 Découvrir les 24 défis <span aria-hidden="true">↓</span></a></div><div class="v31-hotspots"><a class="v31-cta" href="#calendar" aria-label="Découvrir les 24 défis"></a><button class="v31-about" type="button" data-open-dialog="v28-about" aria-label="À propos"></button><button class="v31-guide" type="button" data-open-dialog="v28-guide" aria-label="Mode d’emploi"></button></div></section><nav class="v28-helpbar" aria-label="Informations sur le défi"><button type="button" data-open-dialog="v28-about">ⓘ À propos</button><button type="button" data-open-dialog="v28-guide">📖 Mode d’emploi</button></nav>
+</style></head><body><header class="v18-banner" aria-label="Le Grand Défi de Noël CAAP — 24 jours pour bouger ! — 19 collèges, 24 défis, un même élan !"></header><section class="mobile-welcome" aria-label="Bienvenue au Grand Défi de Noël CAAP"><img class="mobile-welcome-photo" width="1024" height="1400" src="images/accueil-mobile-v36.png" alt="La Sorbonne illuminée pour Noël, avec la Tour Eiffel"><div class="v27-logos" aria-hidden="true"><img src="images/logo-caap-officiel-v28.png" alt="Logo CAAP"><img src="images/logo-academie-paris.jpg" alt="Logo Académie de Paris"></div><div class="v28-lights" aria-hidden="true"></div><div class="mobile-welcome-titles"><div class="mw-green">Le Grand Défi de Noël CAAP</div><div class="mw-red">24 jours pour bouger !</div><div class="mw-white">19 collèges · 24 défis · Un même élan !</div><a class="mobile-cta" href="#calendar">🎁 Découvrir les 24 défis <span aria-hidden="true">↓</span></a></div><div class="v31-hotspots"><a class="v31-cta" href="#calendar" aria-label="Découvrir les 24 défis"></a><button class="v31-about" type="button" data-open-dialog="v28-about" aria-label="À propos"></button><button class="v31-guide" type="button" data-open-dialog="v28-guide" aria-label="Mode d’emploi"></button></div></section><nav class="v28-helpbar" aria-label="Informations sur le défi"><button type="button" data-open-dialog="v28-about">ⓘ À propos</button><button type="button" data-open-dialog="v28-guide">📖 Mode d’emploi</button></nav>
 <dialog id="v28-about" class="v28-dialog" aria-labelledby="v28-about-title"><div class="v28-dialog-inner"><button type="button" class="v28-close" data-close-dialog aria-label="Fermer">×</button><h2 id="v28-about-title">À propos du Grand Défi de Noël CAAP</h2><p>Du 1er au 24 décembre 2026, ce calendrier propose chaque jour un défi d’activité physique, simple, accessible et convivial. Élèves, personnels, familles et amis du CAAP sont invités à bouger ensemble, chacun selon ses possibilités, sans recherche de performance.</p><p>Cette initiative s’inscrit dans le dispositif <strong>Collèges Actifs Avenir Positif (CAAP)</strong> de l’académie de Paris, qui encourage l’activité physique au service de la santé, du bien-être et des apprentissages.</p><h3>Pilotage et réalisation</h3><p><strong>Bruno Tréhet</strong><br>IA-IPR EPS, pilote du dispositif CAAP<br><a href="mailto:bruno.trehet@ac-paris.fr">bruno.trehet@ac-paris.fr</a></p><p><strong>Sophie Cheyrou</strong><br>Professeure d’EPS – Académie de Paris<br>Conception et développement de l’outil « Défi de Noël »<br><a href="mailto:sophie.cheyrou@ac-paris.fr">sophie.cheyrou@ac-paris.fr</a></p><button type="button" class="v28-action" data-close-dialog>Fermer</button></div></dialog>
 <dialog id="v28-guide" class="v28-dialog" aria-labelledby="v28-guide-title"><div class="v28-dialog-inner"><button type="button" class="v28-close" data-close-dialog aria-label="Fermer">×</button><h2 id="v28-guide-title">Bienvenue dans le Grand Défi de Noël ! ✨</h2><p>Du 1er au 24 décembre, un nouveau défi vous attend chaque jour. Voici comment participer :</p><ol><li><strong>Choisissez votre collège</strong> dans la liste, ou « Les amis du CAAP (rectorat) ».</li><li><strong>Ouvrez la case du jour</strong> dans le calendrier. Les jours précédents restent accessibles.</li><li><strong>Réalisez le défi à votre rythme.</strong> Une variante accessible est proposée pour adapter l’activité à vos possibilités.</li><li><strong>Appuyez sur « Défi réalisé ! +1 »</strong> après avoir participé pour enregistrer votre contribution.</li><li><strong>Suivez les compteurs</strong> personnels, de votre groupe et académique pour voir grandir la mobilisation collective.</li></ol><p><strong>Avant le 1er décembre :</strong> le calendrier s’ouvre progressivement à partir du 1er décembre 2026. Le mode découverte permet de consulter les défis en avant-première.</p><p>Le défi est convivial : aucune performance n’est exigée. Votre progression personnelle est enregistrée sur cet appareil ; les compteurs partagés dépendent de la configuration du serveur.</p><button type="button" class="v28-action" data-close-dialog>C’est parti !</button></div></dialog><main><div id="notice" class="notice" hidden aria-hidden="true"></div><div class="top"><section class="panel college"><label for="college">Choisir mon collège</label><select id="college"><option value="">— Sélectionner un collège —</option></select><p class="sub">Élèves, personnels et familles peuvent participer.</p></section><section class="panel personal"><small>🏅 Mes performances</small><div class="number"><span id="personalDone">0</span><span style="font-size:22px;color:#738c82"> / 24</span></div><div class="personal-stats" id="personalPercent">0 % des défis réalisés</div><div class="personal-progress"><span id="personalBar" style="width:0%"></span></div><p class="sub">Ma progression est conservée sur cet appareil.</p></section><section class="panel"><small>🏫 Mon collège</small><div class="number" id="mine">0</div><div>défis réalisés par mon groupe</div></section><section class="panel"><small>🌟 Compteur académique</small><div class="number" id="total">0</div><div>défis réalisés au total</div><div class="mini-tree" id="miniTree" aria-label="Sapin collectif en cours de décoration">🎄</div><div class="tree-message" id="treeMessage">Le sapin collectif attend ses premières décorations !</div></section></div><div class="layout"><section class="panel"><h2 class="sectiontitle">🎁 Le calendrier des défis</h2><label class="toggle"><input type="checkbox" id="demo"> Mode découverte : ouvrir toutes les cases</label><p class="sub">En décembre 2026, une nouvelle case s'ouvre chaque jour. Les précédentes restent accessibles.</p><div class="calendar" id="calendar"></div></section><section class="panel detail"><div class="art"><span class="big" id="art">🎁</span></div><span class="tag" id="tag">DÉFI DU JOUR</span><h2 id="title">Choisis une case</h2><p id="instruction">Découvre ton défi de décembre !</p><div class="variant" id="variant">Chaque défi propose une adaptation accessible.</div><button class="primary" id="complete">✓ Défi réalisé ! +1</button><p class="sub" id="status" aria-live="polite"></p></section></div><section class="panel rank"><h2 class="sectiontitle">✨ Ensemble, les collèges CAAP font bouger Paris !</h2><p class="sub"></p><div class="network-summary" id="networkSummary" aria-live="polite"></div><div id="ranking"></div></section></main><script>
 const EXT_CARTE=['.png','.png','.jpg','.jpg','.png','.png','.jpg','.jpg','.jpg','.jpg','.jpg','.jpg','.jpg','.jpg','.jpg','.jpg','.jpg','.jpg','.jpg','.jpg','.jpg','.jpg','.jpg','.jpg'];
