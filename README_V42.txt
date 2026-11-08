@@ -1,0 +1,1 @@
+V42 : 24 cadeaux santé animés, relecture des cadeaux gagnés, suivi des niveaux Découverte (8-15), Engagement (16-23), Défi accompli (24), attestations PDF A4 paysage accessibles à partir du 24 décembre 2026. Génération locale, prénom et nom non transmis. Compteurs partagés inchangés, nécessitent un hébergement PHP pour fonctionner.
