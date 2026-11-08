@@ -1,0 +1,1 @@
+V41 — 8 vidéos MP4 intégrées aux détails des défis 01, 02, 08, 10, 15, 16, 18 et 24. Lecture automatique, silencieuse, en boucle, compatible playsinline. Photos des vignettes conservées. Corrections textes 16, 18, 20 conservées. Les vidéos sont au format carré et affichées entièrement dans la zone disponible.
